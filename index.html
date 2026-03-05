@@ -7,11 +7,24 @@
     <link rel="stylesheet" href="./styles/style.css">
 </head>
 <body>
-    <nav></nav>
+    <nav>
+        <div id="categories_list"></div>
+        <!-- <button id="selectCategoryBtn">select category</button> -->
+    </nav>
     <div id="gameboard"></div>
     <div id="informationSection">
-    <div id="selectedCharacter"></div>
-        </div>
+        <div id="selectedCharacter"></div>
+        <label for="characteristic">Characteristic</label>
+        <select name="characteristic" id="characteristic">
+            <!-- <option value="select">select</option> -->
+        </select>
+
+        <label for="description">Description</label>
+        <select name="description" id="description">
+            <!-- <option value="select">select</option> -->
+        </select>
+        
+    </div>
     <footer></footer>
     <script src="./scripts/index.js" type="module"></script>
 </body>

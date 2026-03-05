@@ -1,12 +1,12 @@
 body{
     margin: 0;
 }
-.potraits{
+.portraits{
     width: 100%;
     height: 100%;
 }
 
-.potraits:hover{
+.portraits:hover{
     opacity: .5;
     background-color: red;
 }

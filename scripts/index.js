@@ -1,47 +1,85 @@
 import { categories } from "./categories.js";
-const gameboard = document.getElementById("gameboard");
-const selectedCharacter = document.getElementById("selectedCharacter");
+import { buildGameCategoriesList } from "./buildGameCategoriesList.js";
+import { generateCharacterToGuess } from "./generateCharacterToGuess.js";
+import { createCategoriesFromGameCategories } from "./createCategoriesFromGameCategories.js";
+import { buildPortraits } from "./buildPortraits.js";
 
-console.log(categories);
+const gameCategoryCheckboxes = document.getElementsByClassName(
+  "gameCategoryCheckboxes",
+);
 
-const targetCharacter = categories.foods[Math.floor(Math.random(categories.foods.length) * categories.foods.length)]
-console.log(targetCharacter)
+buildGameCategoriesList();
 
-const foodsList = categories.foods;
+if (!document.getElementsByClassName("gameCategoryCheckboxes")[0].checked) {
+  document.getElementsByClassName("gameCategoryCheckboxes")[0].checked = true;
+  generateCharacterToGuess(
+    document.getElementsByClassName("gameCategoryCheckboxes")[0],
+  );
+}
 
-for (let food of foodsList) {
-  const portrait = document.createElement("img");
-  const suffix = food.portrait;
-  const prefix = "http://127.0.0.1:5500/";
-  portrait.src = prefix + suffix;
-  portrait.alt = `${food.name}'s portrait`;
-  portrait.className = "potraits";
-  gameboard.append(portrait);
-  portrait.addEventListener("click", function highlightCharacter() {
-    while (selectedCharacter.firstChild) {
-      selectedCharacter.firstChild.remove();
+for (let i = 0; i < gameCategoryCheckboxes.length; i++) {
+  gameCategoryCheckboxes[i].addEventListener("click", () => {
+    delete sessionStorage.characterToGuess;
+    document.getElementById("guessBtn")?.remove();
+    document.getElementById("justGuessBtn")?.remove();
+
+    while (
+      document.getElementById("characteristic").lastChild.innerText !== "select"
+    ) {
+      document.getElementById("characteristic").lastChild.remove();
     }
-    const portrait = document.createElement("img");
-    portrait.src = prefix + suffix;
-    portrait.alt = `${food.name}'s portrait`;
-    portrait.className = "selectedPortraits";
-    selectedCharacter.append(portrait);
 
-    const guessBtn = document.createElement("button")
-    guessBtn.innerText = "Guess"
-    portrait.after(guessBtn)
+    if (!gameCategoryCheckboxes[i].checked) {
+      const selectedCharacter = document.getElementById("selectedCharacter");
+      const gameboard = document.getElementById("gameboard");
+      while (gameboard.firstChild) {
+        gameboard.firstChild.remove();
+      }
+      while (selectedCharacter.firstChild) {
+        selectedCharacter.firstChild.remove();
+      }
+    }
 
-    guessBtn.addEventListener("click", function (){
-        console.log(food.name)
-        if (food.name === targetCharacter.name) {
-            // console.log("that's right")
-            alert(`Congratulations! ${food.name} is Correct!`)
-        }
-        else {
-            alert(`Sorry, ${food.name} is not correct...`)
-            // console.log("not it")
-        }
-    })
+    generateCharacterToGuess(gameCategoryCheckboxes[i]);
+    if (sessionStorage.characterToGuess) {
+      console.log(
+        "guess this: ",
+        JSON.parse(sessionStorage.characterToGuess).name,
+      );
+    }
+
+    startCheckedGame(gameCategoryCheckboxes[i], gameCategoryCheckboxes);
   });
 }
 
+generateCharacterToGuess(gameCategoryCheckboxes[0]);
+console.log("guess this: ", JSON.parse(sessionStorage.characterToGuess).name);
+startCheckedGame(gameCategoryCheckboxes[0], gameCategoryCheckboxes);
+
+function startCheckedGame(active, total) {
+  const selectedDescription = document.getElementById("description");
+
+  while (selectedDescription.firstChild) {
+    selectedDescription.firstChild.remove();
+  }
+
+  if (active.checked) {
+    for (let checkbox of total) {
+      checkbox.checked = false;
+    }
+
+    active.checked = true;
+    const selectedCategory = active.textContent;
+
+    for (let category of categories[selectedCategory].items) {
+      console.log(category)
+      delete category.eliminated
+    }
+    createCategoriesFromGameCategories(selectedCategory);
+    buildPortraits(selectedCategory, categories);
+  } else {
+    for (let checkbox of total) {
+      checkbox.checked = false;
+    }
+  }
+}
