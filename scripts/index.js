@@ -66,6 +66,9 @@ startCheckedGame(gameCategoryCheckboxes[0], gameCategoryCheckboxes);
 
 function startCheckedGame(active, total) {
   const selectedDescription = document.getElementById("description");
+  const eliminationFeedback =   document.getElementById("eliminationFeedback")
+
+  if (eliminationFeedback) eliminationFeedback.innerText = ""
 
   while (selectedDescription.firstChild) {
     selectedDescription.firstChild.remove();
