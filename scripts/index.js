@@ -8,6 +8,14 @@ const gameCategoryCheckboxes = document.getElementsByClassName(
   "gameCategoryCheckboxes",
 );
 
+for (let category of Object.keys(categories)) {
+  const targetCategories = categories[category].items;
+  for (let category of targetCategories) {
+    category.descriptions["first letter"] = [category.name[0].toUpperCase()];
+    category.descriptions["name length"] = [`${category.name.length} letters`]
+  }
+}
+
 buildGameCategoriesList();
 
 if (!document.getElementsByClassName("gameCategoryCheckboxes")[0].checked) {
@@ -72,8 +80,8 @@ function startCheckedGame(active, total) {
     const selectedCategory = active.textContent;
 
     for (let category of categories[selectedCategory].items) {
-      console.log(category)
-      delete category.eliminated
+      console.log(category);
+      delete category.eliminated;
     }
     createCategoriesFromGameCategories(selectedCategory);
     buildPortraits(selectedCategory, categories);

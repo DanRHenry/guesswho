@@ -7,16 +7,14 @@ export function createCategoriesFromGameCategories(selectedCategory) {
     characteristicSelector.firstChild.remove();
   }
 
-      const descOption = document.createElement("option");
-    descOption.textContent = "...";
-    document.getElementById("description").append(descOption)
-
+  const descOption = document.createElement("option");
+  descOption.textContent = "...";
+  document.getElementById("description").append(descOption);
 
   const selectOption = document.createElement("option");
   selectOption.textContent = "select";
   characteristicSelector.append(selectOption);
 
-  // get list of characteristics from descriptions
   let characteristicsReceived = [];
 
   for (let i = 0; i < categoryInfo.length; i++) {
@@ -44,10 +42,9 @@ export function createCategoriesFromGameCategories(selectedCategory) {
       desciptionSelector.firstChild.remove();
     }
 
-          const descOption = document.createElement("option");
+    const descOption = document.createElement("option");
     descOption.textContent = "select";
-    document.getElementById("description").append(descOption)
-
+    document.getElementById("description").append(descOption);
 
     const selectedIndex = characteristicSelector.options.selectedIndex;
     const selected = characteristicSelector.options[selectedIndex].textContent;
@@ -64,7 +61,7 @@ export function createCategoriesFromGameCategories(selectedCategory) {
       }
     }
     selectedItemDescriptions = new Set(selectedItemDescriptions);
-    
+
     for (let description of selectedItemDescriptions) {
       if (description.length > 0) {
         const descriptionOption = document.createElement("option");

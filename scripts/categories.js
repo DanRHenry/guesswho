@@ -8,16 +8,18 @@ export const categories = {
       hat: "a hat on",
       smiling: "a smile",
       glasses: "glasses on",
+      ponytail: "a ponytail",
     },
     items: [
       {
         name: "Sofia",
         descriptions: {
           ears: ["earrings", { description: "different desc for ears" }],
-          hair: ["curly", "brown", "long", "dark"],
+          hair: ["brown"],
           eyes: ["green"],
           skin: ["brown"],
-          mouth: ["smiling"],
+          mouth: ["visible teeth"],
+            shirt: ["visible"]
         },
         portrait: "assets/faces/sofia.jpg",
       },
@@ -25,10 +27,11 @@ export const categories = {
         name: "Olivia",
         descriptions: {
           ears: ["hidden"],
-          hair: ["black", "red", "long", "dreadlocks"],
+          hair: ["black", "red", "ponytail", "multicolored"],
           eyes: ["brown"],
           skin: ["brown"],
           mouth: ["closed", "a straight face"],
+          shirt: ["visible"],
         },
         portrait: "assets/faces/olivia.jpg",
       },
@@ -36,10 +39,12 @@ export const categories = {
         name: "Mike",
         descriptions: {
           ears: [""],
-          hair: ["brown", "short", "hat"],
+          hair: ["black", "short"],
+          hat: ["red", "beanie", "toque"],
           eyes: ["brown"],
-          skin: [""],
-          mouth: ["smiling"],
+          skin: ["white"],
+          mouth: ["visible teeth"],
+          shirt: ["visible"]
         },
         portrait: "assets/faces/mike.jpg",
       },
@@ -48,35 +53,63 @@ export const categories = {
         descriptions: {
           hair: ["brown"],
           eyes: ["brown", "glasses"],
-          skin: ["light"],
+          skin: ["white"],
         },
         portrait: "assets/faces/ben.jpg",
       },
-      //   {
-      //     name: "Jordan",
-      //     descriptions: {},
-      //     portrait: "assets/faces/jordan.jpg",
-      //   },
-      //   {
-      //     name: "Laura",
-      //     descriptions: {},
-      //     portrait: "assets/faces/laura.jpg",
-      //   },
-      //   {
-      //     name: "Farah",
-      //     descriptions: {},
-      //     portrait: "assets/faces/farah.jpg",
-      //   },
-      //   {
-      //     name: "Katie",
-      //     descriptions: {},
-      //     portrait: "assets/faces/katie.jpg",
-      //   },
-      //   {
-      //     name: "David",
-      //     descriptions: ["blond hair", "brown eyes", "hat"],
-      //     portrait: "assets/faces/david.jpg",
-      //   },
+      {
+        name: "Jordan",
+        descriptions: {
+          skin: ["brown"],
+          eyes: ["brown"],
+          ears: ["earrings"],
+          ["facial hair"]: ["beard", "moustache"],
+          hair: ["short", "multicolored", "yellow", "black"],
+        },
+        portrait: "assets/faces/jordan.jpg",
+      },
+      {
+        name: "Laura",
+        descriptions: {
+          eyes: ["green"],
+          skin: ["brown"],
+          hair: ["black", "long"],
+          ears: ["earrings"],
+          mouth: ["visible teeth"],
+        },
+        portrait: "assets/faces/laura.jpg",
+      },
+        {
+          name: "Farah",
+          descriptions: {
+            eyes: ["blue"],
+            skin: ["brown"],
+            hair: ["black", "ponytail"],
+          },
+          portrait: "assets/faces/farah.jpg",
+        },
+        {
+          name: "Katie",
+          descriptions: {
+            eyes: ["blue"],
+            skin: ["white"],
+            hair: ["ponytail", "blonde", "yellow"],
+            hat: ["green", "baseball cap"],
+          },
+          portrait: "assets/faces/katie.jpg",
+        },
+        {
+          name: "David",
+          descriptions: {
+            hair: ["blonde", "yellow", "short"],
+            skin: ["white"],
+            ["facial hair"]: ["moustache"],
+            hat: ["blue", "baseball cap"],
+            mouth: ["visible teeth"],
+            shirt: ["visible"]
+          },
+          portrait: "assets/faces/david.jpg",
+        },
       //   {
       //     name: "Amy",
       //     descriptions: {},
@@ -131,12 +164,34 @@ export const categories = {
     ],
   },
   foods: {
-    overrides: {},
+    overrides: {
+      stem: "a stem",
+    },
     items: [
       {
         name: "cheese",
-        descriptions: {},
+        descriptions: {
+          type: ["dairy"],
+          color: ["yellow"],
+        },
         portrait: "assets/foods/cheese.jpg",
+      },
+      {
+        name: "strawberry",
+        descriptions: {
+          type: ["fruit", "produce"],
+          color: ["red"],
+          stem: ["stem"],
+        },
+        portrait: "assets/foods/strawberry.jpg",
+      },
+      {
+        name: "tomato",
+        descriptions: {
+          type: ["fruit", "produce"],
+          color: ["red"],
+        },
+        portrait: "assets/foods/tomato.avif",
       },
       {
         name: "bread",
@@ -144,19 +199,9 @@ export const categories = {
         portrait: "assets/foods/bread.jpeg",
       },
       {
-        name: "tomato",
-        descriptions: {},
-        portrait: "assets/foods/tomato.avif",
-      },
-      {
         name: "pickle",
         descriptions: {},
         portrait: "assets/foods/pickle.jpeg",
-      },
-      {
-        name: "strawberry",
-        descriptions: {},
-        portrait: "assets/foods/strawberry.jpg",
       },
       {
         name: "blueberry",
@@ -170,12 +215,17 @@ export const categories = {
       },
       {
         name: "pineapple",
-        descriptions: {},
+        descriptions: {
+          stem: ["stem"],
+        },
         portrait: "assets/foods/pineapple.jpg",
       },
       {
         name: "apple",
-        descriptions: {},
+        descriptions: {
+          stem: ["stem"],
+          color: ["red"],
+        },
         portrait: "assets/foods/apple.webp",
       },
       {
