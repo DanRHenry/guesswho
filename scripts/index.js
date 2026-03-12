@@ -83,7 +83,7 @@ function startCheckedGame(active, total) {
     const selectedCategory = active.textContent;
 
     for (let category of categories[selectedCategory].items) {
-      console.log(category);
+      // console.log(category);
       delete category.eliminated;
     }
     createCategoriesFromGameCategories(selectedCategory);

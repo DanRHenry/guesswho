@@ -9,6 +9,8 @@ export const categories = {
       smiling: "a smile",
       glasses: "glasses on",
       ponytail: "a ponytail",
+      beard: "a beard",
+      moustache: "a moustache",
     },
     items: [
       {
@@ -19,7 +21,7 @@ export const categories = {
           eyes: ["green"],
           skin: ["brown"],
           mouth: ["visible teeth"],
-            shirt: ["visible"]
+          shirt: ["visible"],
         },
         portrait: "assets/faces/sofia.jpg",
       },
@@ -44,7 +46,7 @@ export const categories = {
           eyes: ["brown"],
           skin: ["white"],
           mouth: ["visible teeth"],
-          shirt: ["visible"]
+          shirt: ["visible"],
         },
         portrait: "assets/faces/mike.jpg",
       },
@@ -79,37 +81,37 @@ export const categories = {
         },
         portrait: "assets/faces/laura.jpg",
       },
-        {
-          name: "Farah",
-          descriptions: {
-            eyes: ["blue"],
-            skin: ["brown"],
-            hair: ["black", "ponytail"],
-          },
-          portrait: "assets/faces/farah.jpg",
+      {
+        name: "Farah",
+        descriptions: {
+          eyes: ["blue"],
+          skin: ["brown"],
+          hair: ["black", "ponytail"],
         },
-        {
-          name: "Katie",
-          descriptions: {
-            eyes: ["blue"],
-            skin: ["white"],
-            hair: ["ponytail", "blonde", "yellow"],
-            hat: ["green", "baseball cap"],
-          },
-          portrait: "assets/faces/katie.jpg",
+        portrait: "assets/faces/farah.jpg",
+      },
+      {
+        name: "Katie",
+        descriptions: {
+          eyes: ["blue"],
+          skin: ["white"],
+          hair: ["ponytail", "blonde", "yellow"],
+          hat: ["green", "baseball cap"],
         },
-        {
-          name: "David",
-          descriptions: {
-            hair: ["blonde", "yellow", "short"],
-            skin: ["white"],
-            ["facial hair"]: ["moustache"],
-            hat: ["blue", "baseball cap"],
-            mouth: ["visible teeth"],
-            shirt: ["visible"]
-          },
-          portrait: "assets/faces/david.jpg",
+        portrait: "assets/faces/katie.jpg",
+      },
+      {
+        name: "David",
+        descriptions: {
+          hair: ["blonde", "yellow", "short"],
+          skin: ["white"],
+          ["facial hair"]: ["moustache"],
+          hat: ["blue", "baseball cap"],
+          mouth: ["visible teeth"],
+          shirt: ["visible"],
         },
+        portrait: "assets/faces/david.jpg",
+      },
       //   {
       //     name: "Amy",
       //     descriptions: {},
@@ -173,6 +175,7 @@ export const categories = {
         descriptions: {
           type: ["dairy"],
           color: ["yellow"],
+          shape: ["triangular"],
         },
         portrait: "assets/foods/cheese.jpg",
       },
@@ -182,6 +185,7 @@ export const categories = {
           type: ["fruit", "produce"],
           color: ["red"],
           stem: ["stem"],
+          seeds:["visible"]
         },
         portrait: "assets/foods/strawberry.jpg",
       },
@@ -190,6 +194,8 @@ export const categories = {
         descriptions: {
           type: ["fruit", "produce"],
           color: ["red"],
+          stem: ["stem"],
+          seeds: ["hidden"]
         },
         portrait: "assets/foods/tomato.avif",
       },
@@ -200,23 +206,39 @@ export const categories = {
       },
       {
         name: "pickle",
-        descriptions: {},
+        descriptions: {
+          type: ["produce"],
+          color: ["green"],
+          shape: ["uhhhhh"],
+          seeds: ["hidden"]
+        },
         portrait: "assets/foods/pickle.jpeg",
       },
       {
         name: "blueberry",
-        descriptions: {},
+        descriptions: {
+          shape: ["circular"],
+          color: ["blue"],
+          type: ["fruit"],
+          seeds: ["hidden"]
+        },
         portrait: "assets/foods/blueberry.png",
       },
       {
         name: "kiwi",
-        descriptions: {},
+        descriptions: {
+          shape: ["half-circle"],
+          color: ["green", "brown"],
+          type: ["fruit"],
+          seeds: ["visible"]
+        },
         portrait: "assets/foods/kiwi.webp",
       },
       {
         name: "pineapple",
         descriptions: {
           stem: ["stem"],
+          seeds: ["hidden"]
         },
         portrait: "assets/foods/pineapple.jpg",
       },
@@ -225,6 +247,7 @@ export const categories = {
         descriptions: {
           stem: ["stem"],
           color: ["red"],
+          seeds: ["hidden"]
         },
         portrait: "assets/foods/apple.webp",
       },
@@ -232,6 +255,7 @@ export const categories = {
         name: "peach",
         descriptions: {},
         portrait: "assets/foods/peach.jpg",
+        seeds: ["hidden"]
       },
       {
         name: "pizza",
@@ -240,28 +264,88 @@ export const categories = {
       },
       {
         name: "mac & cheese",
-        descriptions: {},
+        descriptions: {
+          color: ["yellow"],
+          shape: ["uhhhhh"],
+          type: ["dairy", "grain"],
+        },
         portrait: "assets/foods/mac&cheese.jpg",
       },
       {
         name: "chicken nugget",
-        descriptions: {},
+        descriptions: {
+          color: ["orange"],
+          type: ["poultry", "processed"],
+          shape: ["oval"],
+        },
         portrait: "assets/foods/chicken_nugget.jpeg",
       },
       {
         name: "pretzel",
-        descriptions: {},
+        descriptions: {
+          color: ["brown"],
+          shape: ["uhhhhh"],
+        },
         portrait: "assets/foods/pretzel.jpg",
       },
       {
         name: "brownie",
-        descriptions: {},
+        descriptions: {
+          shape: ["square"],
+          color: ["brown"],
+          type: ["dessert"],
+        },
         portrait: "assets/foods/brownie.jpg",
       },
       {
         name: "cake",
-        descriptions: {},
+        descriptions: {
+          type: ["dessert"],
+          color: ["brown"],
+          shape: ["circular"],
+        },
         portrait: "assets/foods/cake.webp",
+      },
+      {
+        name: "pirates booty",
+        descriptions: {
+          type: ["snack"],
+          color: ["yellow"],
+          texture: ["crunchy"],
+          shape: ["uhhhhh"],
+        },
+        portrait: "assets/foods/pirates_booty.webp",
+      },
+      {
+        name: "watermelon",
+        descriptions: {
+          type: ["fruit"],
+          color: ["green", "red"],
+          shape: ["half-circle"],
+          seeds: ["visible"]
+        },
+        portrait: "assets/foods/watermelon.jpg",
+      },
+      {
+        name: "purple grapes",
+        descriptions: {
+          type: ["fruit"],
+          color: ["purple"],
+          shape: ["circle"],
+          stem: ["stem"],
+          seeds: ["hidden"]
+        },
+        portrait: "assets/foods/purple_grapes.webp",
+      },
+      {
+        name: "green grape",
+        descriptions: {
+          type: ["fruit"],
+          color: ["green"],
+          shape: ["circle"],
+          seeds: ["hidden"]
+        },
+        portrait: "assets/foods/grape.jpg",
       },
     ],
   },

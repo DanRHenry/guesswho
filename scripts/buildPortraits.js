@@ -1,7 +1,7 @@
 export function buildPortraits(selectedCategory, originalCategories) {
-  console.log(originalCategories)
+  // console.log(originalCategories)
   const categories = {...originalCategories}
-  console.log(categories)
+  // console.log(categories)
   // console.log(
   //   "character to guess: ",
   //   JSON.parse(sessionStorage.characterToGuess).name,
@@ -51,11 +51,19 @@ export function buildPortraits(selectedCategory, originalCategories) {
         while (selectedCharacter.firstChild) {
           selectedCharacter.firstChild.remove();
         }
+
+        const portraitLabel = document.createElement("div")
+        // portraitLabel.setAttribute("for", "activePortrait")
+        // portraitLabel.innerText = this.name
+        portraitLabel.innerText = this.alt
+
         const portrait = document.createElement("img");
         portrait.src = this.src;
         portrait.alt = this.alt;
+        portrait.id = "activePortrait"
         portrait.className = "selectedPortraits";
         selectedCharacter.append(portrait);
+        selectedCharacter.append(portraitLabel)
 
         const justGuessBtn = document.createElement("button");
         justGuessBtn.id = "justGuessBtn";
