@@ -23,7 +23,7 @@ export function buildPortraits(selectedCategory, originalCategories) {
     );
   }
 
-  const prefix = "http://127.0.0.1:5500/";
+  const prefix = "http://127.0.0.1:5501/";
   let suffix;
 
   const selectedCharacter = document.getElementById("selectedCharacter");

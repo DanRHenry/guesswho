@@ -259,7 +259,9 @@ export const categories = {
       },
       {
         name: "pizza",
-        descriptions: {},
+        descriptions: {
+          shape: ["triangular"]
+        },
         portrait: "assets/foods/pizza.jpg",
       },
       {
@@ -346,6 +348,33 @@ export const categories = {
           seeds: ["hidden"]
         },
         portrait: "assets/foods/grape.jpg",
+      },
+            {
+        name: "broccoli",
+        descriptions: {
+          type: ["vegetable"],
+          color: ["green"],
+          shape: ["uhhhhh"],
+        },
+        portrait: "assets/foods/broccoli.webp",
+      },
+            {
+        name: "carrot",
+        descriptions: {
+          type: ["vegetable"],
+          color: ["green", "orange"],
+          shape: ["uhhhhh"],
+        },
+        portrait: "assets/foods/carrot.webp",
+      },
+            {
+        name: "banana",
+        descriptions: {
+          type: ["fruit"],
+          color: ["yellow"],
+          shape: ["half-circle"],
+        },
+        portrait: "assets/foods/banana.webp",
       },
     ],
   },
