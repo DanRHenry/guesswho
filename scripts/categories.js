@@ -185,7 +185,7 @@ export const categories = {
           type: ["fruit", "produce"],
           color: ["red"],
           stem: ["stem"],
-          seeds:["visible"]
+          seeds: ["visible"],
         },
         portrait: "assets/foods/strawberry.jpg",
       },
@@ -195,7 +195,7 @@ export const categories = {
           type: ["fruit", "produce"],
           color: ["red"],
           stem: ["stem"],
-          seeds: ["hidden"]
+          seeds: ["hidden"],
         },
         portrait: "assets/foods/tomato.avif",
       },
@@ -210,7 +210,7 @@ export const categories = {
           type: ["produce"],
           color: ["green"],
           shape: ["uhhhhh"],
-          seeds: ["hidden"]
+          seeds: ["hidden"],
         },
         portrait: "assets/foods/pickle.jpeg",
       },
@@ -220,7 +220,7 @@ export const categories = {
           shape: ["circular"],
           color: ["blue"],
           type: ["fruit"],
-          seeds: ["hidden"]
+          seeds: ["hidden"],
         },
         portrait: "assets/foods/blueberry.png",
       },
@@ -230,7 +230,7 @@ export const categories = {
           shape: ["half-circle"],
           color: ["green", "brown"],
           type: ["fruit"],
-          seeds: ["visible"]
+          seeds: ["visible"],
         },
         portrait: "assets/foods/kiwi.webp",
       },
@@ -238,7 +238,7 @@ export const categories = {
         name: "pineapple",
         descriptions: {
           stem: ["stem"],
-          seeds: ["hidden"]
+          seeds: ["hidden"],
         },
         portrait: "assets/foods/pineapple.jpg",
       },
@@ -247,7 +247,7 @@ export const categories = {
         descriptions: {
           stem: ["stem"],
           color: ["red"],
-          seeds: ["hidden"]
+          seeds: ["hidden"],
         },
         portrait: "assets/foods/apple.webp",
       },
@@ -255,12 +255,12 @@ export const categories = {
         name: "peach",
         descriptions: {},
         portrait: "assets/foods/peach.jpg",
-        seeds: ["hidden"]
+        seeds: ["hidden"],
       },
       {
         name: "pizza",
         descriptions: {
-          shape: ["triangular"]
+          shape: ["triangular"],
         },
         portrait: "assets/foods/pizza.jpg",
       },
@@ -324,7 +324,7 @@ export const categories = {
           type: ["fruit"],
           color: ["green", "red"],
           shape: ["half-circle"],
-          seeds: ["visible"]
+          seeds: ["visible"],
         },
         portrait: "assets/foods/watermelon.jpg",
       },
@@ -335,7 +335,7 @@ export const categories = {
           color: ["purple"],
           shape: ["circle"],
           stem: ["stem"],
-          seeds: ["hidden"]
+          seeds: ["hidden"],
         },
         portrait: "assets/foods/purple_grapes.webp",
       },
@@ -345,11 +345,11 @@ export const categories = {
           type: ["fruit"],
           color: ["green"],
           shape: ["circle"],
-          seeds: ["hidden"]
+          seeds: ["hidden"],
         },
         portrait: "assets/foods/grape.jpg",
       },
-            {
+      {
         name: "broccoli",
         descriptions: {
           type: ["vegetable"],
@@ -358,7 +358,7 @@ export const categories = {
         },
         portrait: "assets/foods/broccoli.webp",
       },
-            {
+      {
         name: "carrot",
         descriptions: {
           type: ["vegetable"],
@@ -367,7 +367,7 @@ export const categories = {
         },
         portrait: "assets/foods/carrot.webp",
       },
-            {
+      {
         name: "banana",
         descriptions: {
           type: ["fruit"],
@@ -376,6 +376,258 @@ export const categories = {
         },
         portrait: "assets/foods/banana.webp",
       },
+      {
+        name: "ice cream",
+        descriptions: {
+          type: [""],
+          color: [""],
+          shape: [""],
+        },
+        portrait: "assets/foods/ice_cream_drawing.jpg",
+      },
+      {
+        name: "chocolate bar",
+        descriptions: {
+          type: ["fruit"],
+          color: ["yellow"],
+          shape: ["half-circle"],
+        },
+        portrait: "assets/foods/chocolate.webp",
+      },
+      //       {
+      //   name: "banana",
+      //   descriptions: {
+      //     type: ["fruit"],
+      //     color: ["yellow"],
+      //     shape: ["half-circle"],
+      //   },
+      //   portrait: "assets/foods/banana.webp",
+      // },
+    ],
+  },
+  animals: {
+    overrides: {},
+    items: [
+      {
+        name: "Cyclops Shark (1 in 3.5M)",
+        descriptions: {
+          type: [""],
+          color: [""],
+        },
+        portrait: "assets/animals/cyclops-shark.webp",
+      },
+      {
+        name: "Monkey",
+        descriptions: {
+          type: [""],
+          color: [""],
+        },
+        portrait: "assets/animals/monkey.jpg",
+      },
+      {
+        name: "Snake",
+        descriptions: {
+          type: [""],
+          color: [""],
+        },
+        portrait: "assets/animals/snake.jpg",
+      },
+      {
+        name: "Ladybug",
+        descriptions: {
+          type: [""],
+          color: [""],
+        },
+        portrait: "assets/animals/ladybug.jpg",
+      },
+      {
+        name: "Frog",
+        descriptions: {
+          type: [""],
+          color: [""],
+        },
+        portrait: "assets/animals/frog.jpg",
+      },
+      {
+        name: "Kangaroo",
+        descriptions: {
+          type: [""],
+          color: [""],
+        },
+        portrait: "assets/animals/kangaroo.avif",
+      },
+      {
+        name: "Crocodile",
+        descriptions: {
+          type: [""],
+          color: [""],
+        },
+        portrait: "assets/animals/crocodile.webp",
+      },
+      {
+        name: "Human",
+        descriptions: {
+          type: [""],
+          color: [""],
+        },
+        portrait: "assets/animals/human.webp",
+      },
+      {
+        name: "Banana -- Wait, WHY ARE YOU HERE?",
+        descriptions: {
+          type: [""],
+          color: [""],
+        },
+        portrait: "assets/foods/banana.webp",
+      },
+      {
+        name: "Cat",
+        descriptions: {
+          type: [""],
+          color: [""],
+        },
+        portrait: "assets/animals/cat.avif",
+      },
+      {
+        name: "Fish",
+        descriptions: {
+          type: [""],
+          color: [""],
+        },
+        portrait: "assets/animals/fish.png",
+      },
+      {
+        name: "Eagle",
+        descriptions: {
+          type: [""],
+          color: [""],
+        },
+        portrait: "assets/animals/eagle.webp",
+      },
+      {
+        name: "Dog",
+        descriptions: {
+          type: [""],
+          color: [""],
+        },
+        portrait: "assets/animals/dog.avif",
+      },
+      {
+        name: "Pig",
+        descriptions: {
+          type: [""],
+          color: [""],
+        },
+        portrait: "assets/animals/pig.webp",
+      },
+      {
+        name: "Cow",
+        descriptions: {
+          type: [""],
+          color: [""],
+        },
+        portrait: "assets/animals/cow.webp",
+      },
+      {
+        name: "Chicken",
+        descriptions: {
+          type: [""],
+          color: [""],
+        },
+        portrait: "assets/animals/chicken.webp",
+      },
+      {
+        name: "Octopus",
+        descriptions: {
+          type: [""],
+          color: [""],
+        },
+        portrait: "assets/animals/octopus.webp",
+      },
+      {
+        name: "Jellyfish",
+        descriptions: {
+          type: [""],
+          color: [""],
+        },
+        portrait: "assets/animals/jellyfish.webp",
+      },
+      {
+        name: "Elephant",
+        descriptions: {
+          type: [""],
+          color: [""],
+        },
+        portrait: "assets/animals/elephant.webp",
+      },
+      {
+        name: "Sloth",
+        descriptions: {
+          type: [""],
+          color: [""],
+        },
+        portrait: "assets/animals/sloth.webp",
+      },
+      {
+        name: "Bull",
+        descriptions: {
+          type: [""],
+          color: [""],
+        },
+        portrait: "assets/animals/bull.webp",
+      },
+      {
+        name: "Spider",
+        descriptions: {
+          type: [""],
+          color: [""],
+        },
+        portrait: "assets/animals/spider.webp",
+      },
+      // {
+      //   name: "",
+      //   descriptions: {
+      //     type: [""],
+      //     color: [""],
+      //   },
+      //   portrait: "assets/animals/.jpg",
+      // },
+      //{
+      //   name: "",
+      //   descriptions: {
+      //     type: [""],
+      //     color: [""],
+      //   },
+      //   portrait: "assets/animals/.jpg",
+      // },                        // {
+      //   name: "",
+      //   descriptions: {
+      //     type: [""],
+      //     color: [""],
+      //   },
+      //   portrait: "assets/animals/.jpg",
+      // },                        // {
+      //   name: "",
+      //   descriptions: {
+      //     type: [""],
+      //     color: [""],
+      //   },
+      //   portrait: "assets/animals/.jpg",
+      // },                        // {
+      //   name: "",
+      //   descriptions: {
+      //     type: [""],
+      //     color: [""],
+      //   },
+      //   portrait: "assets/animals/.jpg",
+      // },                        // {
+      //   name: "",
+      //   descriptions: {
+      //     type: [""],
+      //     color: [""],
+      //   },
+      //   portrait: "assets/animals/.jpg",
+      // },
     ],
   },
 };
